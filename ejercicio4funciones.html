@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        //necesito una aplicacions que me permita controlar el stock del producto que tengo en tienda. Para ello necesito saber cuanto stock total tengo, necesito poder añadir nuevo producto cuando me falte stock, la aplicación deberar controlar el stock disponible avisandome de comprar cuando sea menos de 5 productos lo que queden.
+
+        //necesito un sitio que almece stock, numerico stock = 125, ese stock es accesible para cualquier parte de codigo.
+
+        //mostrar el stock por pantalla
+
+        //necesito algo que me permita aumentar mi stock----------
+
+        //necesita algo que permita al usuario comprar producto en la cantidad que el quiera.------
+
+        //tengo que controlar que tengo stock, comprobar si puede servir el producto que me piden-----
+
+        // y seria deseable que cuando me queden menos de 5 producto me avise de necesito comprar.----
+
+        var stock = 100;
+        const numeroMinimoStock = 5;
+        const mensajeCompraNoRealizada = 'Compra no realizada, en stock hay: ';
+        const mensajeStock = 'Stock total: ';
+        const mensajeAumento = 'Has aumentado al stock: ';
+        const mensajeCompraError = 'No se a podido realizar la compra, ha en stock: '
+        const mensajeCompraRealizada = 'Compra realizada';
+        const mensajeStockBajo = 'Stock bajo: ';
+        const unidades = " uni."
+
+        avisar(stock);
+        function aumentarStock(pNumeroA, pNumeroB = stock) {
+            const resultado = pNumeroB + pNumeroA;
+            stock = resultado;
+            console.log(mensajeAumento + pNumeroA + unidades)
+            verStock();
+        };
+        function comprar(pNumeroA, pNumeroB = stock) {
+            if (stock < pNumeroA) {
+                console.log(mensajeCompraNoRealizada + stock);
+
+            } else {
+                const resultado = pNumeroB - pNumeroA;
+                const numero = pNumeroA;
+                console.log(mensajeCompraRealizada);
+                stock = resultado;
+                avisar(stock);
+                return numero;
+            }
+        };
+        function avisar(pNumeroA, pNumeroB = numeroMinimoStock) {
+            pNumeroA < pNumeroB ? console.log(mensajeStockBajo + pNumeroA + unidades) : true;
+        };
+        function verStock(pNumero = stock) {
+            console.log(mensajeStock + pNumero + unidades);
+            return pNumero;
+        };
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
