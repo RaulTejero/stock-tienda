@@ -2,7 +2,6 @@
 Control de stock en tienda
 
 - Ejercicio de funciones y flujo.
-- Javascript inyectado en el archivo html.
 - Control desde la consola.
 - funciones
     - verStock( )
