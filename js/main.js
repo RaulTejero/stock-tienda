@@ -24,11 +24,9 @@ function aumentarStock(pNumero) {
     console.log(mensajeAumento + pNumero + unidades)
     verStock();
 };
-
 function verStock() {
     console.log(mensajeStock + stock + unidades);
 };
-
 function comprar(pNumero) {
     if (stock < pNumero) {
         console.log(mensajeCompraNoRealizada + stock);
@@ -40,5 +38,5 @@ function comprar(pNumero) {
     }
 };
 function avisar() {
-    (numeroMinimoStock > stock) ? console.log(mensajeStockBajo + stock + unidades) : true;
+    (numeroMinimoStock > stock) ? alert(mensajeStockBajo + stock + unidades) : true;
 };
